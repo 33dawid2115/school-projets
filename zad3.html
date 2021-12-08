@@ -22,7 +22,11 @@
             event.preventDefault();
             var nazwa = document.getElementById("stan").value;
             var xhr = new XMLHttpRequest();
-            xhr.open('GET' , 'sprawdz.php$stan='+nazwa,true);
+            xhr.open('GET' , 'sprawdz_3.php$stan='+nazwa,true);
+            xhr.onload = function(){
+                console.log(this.responseText);
+            }
+            xhr.send();
         }
 
     </script>
