@@ -1,12 +1,12 @@
 <?php
-    $zmienna = $GET['stan'];
+    $zmienna = $_GET['stan'];
 
     if($zmienna == 1){
-        echo "zmienna: ". $zmienna;
+        echo ("zmienna: ". $zmienna);
     }else if($zmienna==2){
-        echo "zmienna inna: ". $zmienna;
+        echo ("zmienna inna: ". $zmienna);
     }else{
-        echo("Failure");
+        echo ("Failure");
     }
 
 ?>
