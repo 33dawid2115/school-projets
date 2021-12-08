@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax zadanie</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    
+    <button id="przycisk">laduj gory</button>
+    <h1>GÓRY</h1>
+    <div id="gory"></div>
+
+    <script type="text/javascript">
+
+        document.getElementById("przycisk").addEventListener("click" , laduj);
+
+        function laduj() {
+            var XHR = new XMLHttpRequest();
+            XHR.open('GET' , 'dane.json' , true);
+
+            XHR.onload = function(){
+                if(this.status == 200){
+                    var users =JSON.parse(this.responseText);
+
+                    var output = '';
+                    for (let i in users){
+                        output += `
+
+                        <ul>
+                            <li>Id: ${users[i].id}</li>
+                            <li>Tytul: ${users[i].title}</li>
+                            <li>Nazwa: ${users[i].name}</li>
+                            <li>${users[i].img}</li>
+                        </ul>
+
+                        `;
+                    }
+                    document.getElementById("gory").innerHTML = output;
+                }
+            }
+            XHR.send();
+        }
+
+    </script>
+
+</body>
+</html>
