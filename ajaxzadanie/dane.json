@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "title":"Gory 1",
+        "name":"Tatry",
+        "img":"<img src=tatry.jpg width=150px>"
+    },
+    {
+        "id":2,
+        "title":"Gory2",
+        "name":"Bieszczady",
+        "img":"<img src=bieszczady.jpg width=150px>"
+    },
+    {
+        "id":3,
+        "title":"Gory3",
+        "name":"Rysy",
+        "img":"<img src=rysy.jpg width=150px>"
+    },
+    {
+        "id":4,
+        "title":"Gory4",
+        "name":"Karkonosze",
+        "img":"<img src=karkonosze.jpg width=150px>"
+    }
+]
